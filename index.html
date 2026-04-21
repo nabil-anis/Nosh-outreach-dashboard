@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wise Business Plans | Automation Dashboard</title>
+  <meta name="description" content="Real-time telemetry dashboard for monitoring automated voicemail and email workflows. Tracks lead ingestion, intelligent routing, and multi-channel dispatch performance.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      background-color: #030407;
+      color: #F8FAFC;
+      overflow-x: hidden;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glass:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .mesh-gradient {
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.1) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(37, 99, 235, 0.1) 0px, transparent 50%);
+    }
+
+    .bento-card {
+      border-radius: 24px;
+      padding: 24px;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #030407;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1E293B;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-in {
+      animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  </style>
+  <script>
+    // Shim for process.env to prevent ReferenceErrors in browser
+    window.process = window.process || { env: {} };
+  </script>
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://esm.sh/react@^19.2.4",
+      "react/": "https://esm.sh/react@^19.2.4/",
+      "react-dom": "https://esm.sh/react-dom@^19.2.4",
+      "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+      "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+      "recharts": "https://esm.sh/recharts@3.7.0?bundle"
+    }
+  }
+  </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="root"></div>
+  <!-- Entry point for the application -->
+  <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
