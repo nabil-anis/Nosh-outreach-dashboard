@@ -1,6 +1,6 @@
 {
-  "name": "nosh AI  - Automation Dashboard",
-  "description": "Real-time telemetry dashboard for monitoring automated voicemail and email workflows. Tracks lead ingestion, intelligent routing, and multi-channel dispatch performance.",
+  "name": "nosh AI  - Automation Dashboard for email",
+  "description": "Real-time telemetry dashboard for monitoring NOSH AI email outreach workflows. Tracks lead ingestion, sequence status, and reply detection performance.",
   "requestFramePermissions": [],
   "majorCapabilities": []
 }

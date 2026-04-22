@@ -4,25 +4,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wise Business Plans | Automation Dashboard</title>
-  <meta name="description" content="Real-time telemetry dashboard for monitoring automated voicemail and email workflows. Tracks lead ingestion, intelligent routing, and multi-channel dispatch performance.">
+  <title>NOSH | Automation Dashboard</title>
+  <meta name="description" content="Real-time telemetry dashboard for monitoring NOSH email workflows. Tracks lead ingestion, intelligent routing, and multi-channel dispatch performance.">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
     
+    :root {
+      --bg-color: #030407;
+      --text-color: #F8FAFC;
+      --glass-bg: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.08);
+    }
+
+    .light {
+      --bg-color: #F8FAFC;
+      --text-color: #0F172A;
+      --glass-bg: rgba(0, 0, 0, 0.03);
+      --glass-border: rgba(0, 0, 0, 0.08);
+    }
+
     body {
       font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
-      background-color: #030407;
-      color: #F8FAFC;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
       overflow-x: hidden;
     }
 
     .glass {
-      background: rgba(255, 255, 255, 0.03);
+      background: var(--glass-bg);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--glass-border);
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
